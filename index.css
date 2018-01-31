@@ -1,0 +1,72 @@
+.demo{
+    width: 400px;
+    height: 600px;
+    background: #0e90d2;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.wrap-right-circle{
+    position: relative;
+    width: 80px;
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+}
+.wrap-left-circle{
+    position: relative;
+    width: 80px;
+    height: 200px;
+    overflow: hidden;
+}
+.right-circle{
+    width: 160px;
+    height: 160px;
+    border:20px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    border-top:20px solid black;
+    border-right:20px solid black;
+    -webkit-transform : rotate(45deg);
+    -moz-transform : rotate(45deg);
+    -o-transform : rotate(45deg);
+    transform : rotate(-135deg); /* 旋转45度 */
+    animation-name: right-animated; /* 动画名称 */
+    animation-duration: 5s;  /* 完成一个动画需要的时间 */
+    animation-timing-function: linear; /* 动画播放的方式，linear是匀速变化 */
+    animation-iteration-count: infinite;  /* 动画播放的次数，infinite是无限次数 */
+}
+.left-circle{
+    width: 160px;
+    height: 160px;
+    border: 20px solid transparent;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    border-bottom: 20px solid black;
+    border-left: 20px solid black;
+    transform: rotate(-135deg);
+    animation-name: left-animated; /* 动画名称 */
+    animation-duration: 5s;  /* 完成一个动画需要的时间 */
+    animation-timing-function: linear; /* 动画播放的方式，linear是匀速变化 */
+    animation-iteration-count: infinite;  /* 动画播放的次数，infinite是无限次数 */
+}
+@keyframes right-animated {
+    0%{
+        transform : rotate(-135deg);
+    }
+    50%,100%{
+        transform : rotate(45deg);
+    }
+}
+@keyframes left-animated{
+    0%,50%{
+        -webkit-transform: rotate(-135deg);
+    }
+    100%{
+        -webkit-transform: rotate(45deg);
+    }
+}

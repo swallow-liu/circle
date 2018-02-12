@@ -6,12 +6,13 @@
     <link ref="stylesheet" type="text/css" href="./index.css">
     <style>
         .demo{
-            width: 400px;
+            width: 600px;
             height: 600px;
             background: #0e90d2;
             position: relative;
             display: flex;
             flex-direction: row;
+            text-align: center;
         }
         .wrap-right-circle{
             position: relative;
@@ -19,26 +20,26 @@
             height: 200px;
             text-align: center;
             overflow: hidden;
+            left:100px;
         }
         .wrap-left-circle{
             position: relative;
             width: 80px;
             height: 200px;
             overflow: hidden;
+            left:100px;
         }
         .right-circle{
             width: 160px;
             height: 160px;
             border:20px solid transparent;
-            border-radius: 50%;
+            border-radius: 160px;
             position: absolute;
             top:0px;
             right: 0px;
             border-top:20px solid black;
             border-right:20px solid black;
-            -webkit-transform : rotate(45deg);
-            -moz-transform : rotate(45deg);
-            -o-transform : rotate(45deg);
+            border-bottom: 20px solid black;
             transform : rotate(-135deg); /* 旋转45度 */
             animation-name: right-animated; /* 动画名称 */
             animation-duration: 5s;  /* 完成一个动画需要的时间 */
@@ -50,11 +51,12 @@
             height: 160px;
             border: 20px solid transparent;
             position: absolute;
-            border-radius: 50%;
+            border-radius: 160px;
             top: 0;
             left: 0;
             border-bottom: 20px solid black;
             border-left: 20px solid black;
+            border-bottom: 20px solid black;
             transform: rotate(-135deg);
             animation-name: left-animated; /* 动画名称 */
             animation-duration: 5s;  /* 完成一个动画需要的时间 */
